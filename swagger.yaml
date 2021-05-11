@@ -28,40 +28,39 @@ paths:
       - "usuario"
       summary: "¿?"
       consumes:
-      - "application/text"
+      - "text/plain"
       produces:
       - "application/json"
       parameters:
-      - name: "UID"
-        in: "app.db.UID"
-        description: "¿?"
-        type: "string"
-      - name: "LocalOffset"
-        in: "app.db.localOffset_Base64"
-        description: "¿?"
-        type: "string"
-      - name: "Country"
-        in: "app.db.country_Base64"
-        description: "¿?"
-        type: "string"
-      - name: "AppName"
-        in: "app.db.appName"
-        description: "¿?"
-        type: "string"
-      - name: "DataService"
-        in: "param1"
-        description: "¿?"
-        type: "string"
-      - name: "Val"
-        in: "param2"
-        description: "¿?"
-        type: "string"
+      - in: body
+        name: "body"
+        schema:
+          type: object
+          properties:
+            UID:
+              type: string
+              description: Numerito UID
+            LocalOffset:
+              type: string
+            Country:
+              type: string
+            AppName:
+              type: string
+            DataService:
+              type: string
+            Val:
+              type: string
+      responses:
+        200:
+          description: "Ok"
+          schema:
+            $ref: "#/definitions/ApiResponse"
 
   /App_GetNationality:
     post:
       tags:
       - "utilidades"
-      summary: "¿?"
+      summary: "Obtener listado de nacionalidades"
       consumes:
       - "text/plain"
       produces:
@@ -76,7 +75,7 @@ paths:
     post:
       tags:
       - "utilidades"
-      summary: "¿?"
+      summary: "Obtener listado de estatus maritales"
       consumes:
       - "text/plain"
       produces:
