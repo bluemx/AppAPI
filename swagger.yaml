@@ -310,6 +310,28 @@ paths:
           schema:
             $ref: "#/definitions/ApiResponse"
           
+  /App_ValidateCardInfo_V110:
+    post:
+      tags:
+      - "tarjeta"
+      summary: "Validar tarjeta física"
+      consumes:
+      - "text/plain"
+      produces:
+      - "application/json"
+      parameters:
+      - in: body
+        name: "body"
+        schema:
+            properties:
+              PlasticCardID:
+                type: string
+      responses:
+        200:
+          description: "Ok"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+          
 
 
   /App_GetStores_V126:
