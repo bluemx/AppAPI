@@ -160,7 +160,7 @@ paths:
       - in: body
         name: "body"
         schema:
-            $ref: "#/definitions/CardInfo"
+            $ref: "#/definitions/UserAll"
       responses:
         200:
           description: "Ok"
@@ -223,46 +223,7 @@ paths:
       - in: body
         name: "body"
         schema:
-          type: object
-          properties:
-            Email:
-              type: string
-            Password:
-              type: string
-            CardID:
-              type: string
-            Firstname:
-              type: string
-            Lastname:
-              type: string
-            Lastname2:
-              type: string
-            BirthDate:
-              type: string
-            Sex:
-              type: string
-            Phone:
-              type: string
-            CellPhone:
-              type: string
-            ZipCode:
-              type: string
-            StateID:
-              type: string
-            Suburb:
-              type: string
-            County:
-              type: string
-            RegisterTypeID:
-              type: string
-            Nacionality:
-              type: string
-            MaritalStatus:
-              type: string
-            Ocupation:
-              type: string
-            Street:
-              type: string
+          $ref: "#/definitions/UserAll"
       responses:
         200:
           description: "Ok"
@@ -623,6 +584,47 @@ definitions:
       User:
         type: string
       Password:
+        type: string
+  UserAll:
+    type: "object"
+    properties:
+      Email:
+        type: string
+      Password:
+        type: string
+      CardID:
+        type: string
+      Firstname:
+        type: string
+      Lastname:
+        type: string
+      Lastname2:
+        type: string
+      BirthDate:
+        type: string
+      Sex:
+        type: string
+      Phone:
+        type: string
+      CellPhone:
+        type: string
+      ZipCode:
+        type: string
+      StateID:
+        type: string
+      Suburb:
+        type: string
+      County:
+        type: string
+      RegisterTypeID:
+        type: string
+      Nacionality:
+        type: string
+      MaritalStatus:
+        type: string
+      Ocupation:
+        type: string
+      Street:
         type: string
   CardInfo:
     type: "object"
