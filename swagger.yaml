@@ -446,7 +446,7 @@ paths:
   /App_GetTransactions:
     post:
       tags:
-      - "tarjeta"
+      - "usuario"
       summary: "Obtener transacciones"
       consumes:
       - "text/plain"
